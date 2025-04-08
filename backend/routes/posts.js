@@ -94,7 +94,7 @@ router.delete(':/id', async(req, res)=>{
 
         await Post.findByIdAndDelete(post._id)
         res.status(200).json({
-            message: "Successfully Deleted"
+            message: "Successfully Post Deleted"
         })
     }
     catch(error){
@@ -103,3 +103,6 @@ router.delete(':/id', async(req, res)=>{
         })
     }
 })
+
+
+modules.exports = router
