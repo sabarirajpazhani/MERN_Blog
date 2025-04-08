@@ -8,7 +8,7 @@ router.get('/', async(req,res) =>{
         const post = await Post.find()
         res.status(200).json(post)
     }
-    catch{
+    catch(error){
         res.status(500).json({
             message: "Internal Server Error"
         })
@@ -26,9 +26,31 @@ router.get('/:id', async(req, res) =>{
         }
         res.status(200).json(post)
     }
-    catch{
+    catch(error){
         res.status(500).json({
             message: "Internal server Error"
         })
     }
 })
+
+//Create a new post
+router.post('/', async(req, res) =>{
+    const post = new Post({
+        title: req.body.title,
+        content: req.body.content,
+        category: req.body.category,
+        author: req.body.author,
+        image: req.body.image
+    })
+
+    try{
+        const post = await post.save()
+        res.status(201).json(post)
+    }
+    catch(error){
+        res.status(500).json({
+            message: "Internal Server Error"
+        })
+    }
+})
+
