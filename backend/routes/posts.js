@@ -81,3 +81,25 @@ router.put('/:id', async(req, res) =>{
         })
     }
 })
+
+//Delete the post
+router.delete(':/id', async(req, res)=>{
+    try{
+        const post = await Post.findById(req.params.id);
+        if (!post){
+            return res.status(404).json({
+                message: "Post not found"
+            })
+        }
+
+        await Post.findByIdAndDelete(post._id)
+        res.status(200).json({
+            message: "Successfully Deleted"
+        })
+    }
+    catch(error){
+        res.status(500).json({
+            message: "Internal server error"
+        })
+    }
+})
