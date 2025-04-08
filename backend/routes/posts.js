@@ -83,7 +83,7 @@ router.put('/:id', async(req, res) =>{
 })
 
 //Delete the post
-router.delete(':/id', async(req, res)=>{
+router.delete('/:id', async(req, res)=>{
     try{
         const post = await Post.findById(req.params.id);
         if (!post){
@@ -105,4 +105,4 @@ router.delete(':/id', async(req, res)=>{
 })
 
 
-modules.exports = router
+module.exports = router

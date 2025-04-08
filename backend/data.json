@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Getting Started with MERN Stack",
+      "content": "The MERN stack consists of MongoDB, Express.js, React, and Node.js. It's a powerful combination for full-stack web development.",
+      "category": "Web Development",
+      "author": "Sabari Raj",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+      "createdAt": "2024-08-01T10:00:00Z",
+      "updatedAt": "2024-08-01T10:00:00Z"
+    },
+    {
+      "title": "Understanding JavaScript Closures",
+      "content": "Closures allow a function to access variables from an enclosing scope, even after that scope has closed.",
+      "category": "JavaScript",
+      "author": "Thamizh Arasan. JS",
+      "image": "https://images.pexels.com/photos/938639/pexels-photo-938639.jpeg?cs=srgb&dl=pexels-ravi-k-301762-938639.jpg&fm=jpg",
+      "createdAt": "2024-08-10T14:30:00Z",
+      "updatedAt": "2024-08-10T14:30:00Z"
+    },
+    {
+      "title": "Why You Should Learn MongoDB",
+      "content": "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It's ideal for modern applications.",
+      "category": "Database",
+      "author": "Jeeva",
+      "image": "https://img.freepik.com/free-photo/man-wearing-t-shirt-gesturing_23-2149393650.jpg?semt=ais_hybrid",
+      "createdAt": "2024-08-15T09:15:00Z",
+      "updatedAt": "2024-08-15T09:15:00Z"
+    }
+  ]
+  
