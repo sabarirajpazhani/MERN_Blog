@@ -16,7 +16,7 @@ export default function PostList(){
 
     return <>
         
-	    <main>
+	    <main >
 			<div class="row">
 			
 				<div class="col-lg-8">
