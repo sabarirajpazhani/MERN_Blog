@@ -44,8 +44,8 @@ router.post('/', async(req, res) =>{
     })
 
     try{
-        const post = await post.save()
-        res.status(201).json(post)
+        const newPost = await post.save()
+        res.status(201).json(newPost)
     }
     catch(error){
         res.status(500).json({
