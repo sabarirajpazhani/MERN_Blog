@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Post({post}){
     return <div class="card mb-4">
     <div class="row">
@@ -8,7 +10,7 @@ export default function Post({post}){
         <div class="card-body col-md-8">
             <h5 class="card-title">{post.title}</h5>
             <p class="card-text">{post.content.substr(0,50)} ...</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <Link to={`posts/${post._id}`} class="btn btn-primary">Read More</Link>
         </div>
     </div>
 

@@ -15,35 +15,8 @@ export default function PostList(){
     },[])
 
     return <>
-        <header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container">
-				<a class="navbar-brand" href="#">My Blog</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Posts</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-
-	<main>
+        
+	    <main>
 			<div class="row">
 			
 				<div class="col-lg-8">
@@ -75,12 +48,6 @@ export default function PostList(){
 				</div>
 			</div>
 	</main>
-
-	<footer class="bg-dark text-white text-center py-3 fixed-bottom">
-		<div class="container">
-			<p>&copy; 2024 My Blog. All rights reserved.</p>
-		</div>
-	</footer>
 
     </>
 }
