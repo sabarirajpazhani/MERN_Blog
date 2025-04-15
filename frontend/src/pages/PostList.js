@@ -4,14 +4,23 @@ import axios from 'axios'
 
 export default function PostList(){
     const [posts, setPosts] = useState([])
+	const [categories, setCategories] = useState([])
 
     const fetchPosts=async()=>{
         const response = await axios.get('http://localhost:8000/api/posts/')
         setPosts(response.data)
     }
 
+	const fetchCategories = async() =>{
+		const response = await axios.get('http://localhost:8000/api/categories/')
+		setCategories(response.data)
+	}
+
+
+
     useEffect(()=>{
         fetchPosts();
+		fetchCategories();
     },[])
 
     return <>
@@ -39,9 +48,7 @@ export default function PostList(){
 						<div class="card-body">
 							<h5 class="card-title">Categories</h5>
 							<ul class="list-group">
-								<li class="list-group-item"><a href="#" class="text-black">Category 1</a></li>
-								<li class="list-group-item"><a href="#"  class="text-black">Category 2</a></li>
-								<li class="list-group-item"><a href="#"  class="text-black">Category 3</a></li>
+								{categories.map(category => <li class="list-group-item"><a href="#" class="text-black">{category.name}</a></li>)}
 							</ul>
 						</div>
 					</div>
