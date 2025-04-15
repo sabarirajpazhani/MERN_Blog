@@ -89,7 +89,7 @@ router.delete('/:id', async(req, res)=>{
             })
         }
 
-        await Category.findByIdAndDelete(post._id)
+        await Category.findByIdAndDelete(category._id)
         res.status(200).json({
             message: "Successfully Category Deleted"
         })
