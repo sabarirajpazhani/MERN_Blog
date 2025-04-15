@@ -42,7 +42,7 @@ router.post('/', async(req, res) =>{
     })
 
     try{
-        const newCategory = await Category.save()
+        const newCategory = await category.save()
         res.status(201).json(newCategory)
     }
     catch(error){
