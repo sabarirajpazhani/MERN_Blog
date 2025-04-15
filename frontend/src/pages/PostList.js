@@ -1,6 +1,7 @@
 import Post from "../components/Post";
 import {useEffect, useState} from 'react';
 import axios from 'axios'
+import { Link } from "react-router-dom";
 
 export default function PostList(){
     const [posts, setPosts] = useState([])
@@ -48,7 +49,7 @@ export default function PostList(){
 						<div class="card-body">
 							<h5 class="card-title">Categories</h5>
 							<ul class="list-group">
-								{categories.map(category => <li class="list-group-item"><a href="#" class="text-black">{category.name}</a></li>)}
+								{categories.map(category => <li class="list-group-item"><Link to={`/posts/category/${category._id}`} class="text-black">{category.name}</Link></li>)}
 							</ul>
 						</div>
 					</div>
