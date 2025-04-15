@@ -33,3 +33,21 @@ router.get('/:id', async(req, res) =>{
     }
 })
 
+//Create a new category
+router.post('/', async(req, res) =>{
+    const category = new Category({
+       name: req.body.name,
+       slug: req.body.slug,
+       description: req.body.description
+    })
+
+    try{
+        const newCategory = await Category.save()
+        res.status(201).json(newCategory)
+    }
+    catch(error){
+        res.status(500).json({
+            message: "Internal Server Error"
+        })
+    }
+})
